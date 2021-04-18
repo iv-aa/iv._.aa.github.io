@@ -316,7 +316,7 @@ nav {
     height: 100vh;
     /* background-color: var(--main-font-color-dark); */
     /* background-color: black; */
-    background: url("pics/home.jpg") center no-repeat;
+    background: url("home.jpg") center no-repeat;
     background-size: cover;
     display: flex;
     align-items: center;
