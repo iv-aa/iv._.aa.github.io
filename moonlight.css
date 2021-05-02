@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0A2A43;
+    min-height: 1500px;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+}
+
+.fade {
+    position: relative;
+    
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #0A2A43, transparent);
+    z-index: 10000;
+}
+
+section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:#0A2A43;
+    z-index: 10000;
+    mix-blend-mode: color;
+}
+
+section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+#text {
+    position: relative;
+    color: #fff;
+    font-size: 10em;
+    z-index: 1;
+}
+
+#road {
+    z-index: 2;
+}
+
+.container {
+    padding: 2rem;
+}
+
+h1, p {
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 30px;
+    margin-top: 15px; }
+    .container .thumbex {
+      margin: 10px 20px 30px;
+      width: 100%;
+      /* min-width: 200px; */
+      max-width: 300px;
+      height: 500px;
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      overflow: hidden;
+      /* outline: 2px solid white; */
+      outline-offset: -15px;
+      box-shadow: 5px 10px 40px 5px rgba(0, 0, 0, 0.5); }
+      .container .thumbex .thumbnail {
+        overflow: hidden;
+        /* min-width: 200px; */
+        height: 500px;
+        position: relative;
+        opacity: 0.9;
+        backface-visibility: hidden;
+        transition: all 0.4s ease-out; }
+        .container .thumbex .thumbnail img {
+          position: absolute;
+          z-index: 1;
+          left: 50%;
+          top: 50%;
+          height: 115%;
+          width: auto;
+          transform: translate(-50%, -50%);
+          backface-visibility: hidden; }
+        .container .thumbex .thumbnail span {
+          position: absolute;
+          z-index: 2;
+          top: calc(150px - 20px);
+          left: 0;
+          right: 0;
+          background: rgba(0, 0, 0, 0.7);
+          padding: 10px 50px;
+          margin: 0 45px;
+          text-align: center;
+          font-size: 24px;
+          color: white;
+          font-weight: 300;
+          font-family: "Raleway", sans-serif;
+          letter-spacing: 0.2px;
+          transition: all 0.3s ease-out; }
+        .container .thumbex .thumbnail:hover {
+          backface-visibility: hidden;
+          transform: scale(1.1, 1.1);
+          opacity: 1; }
+          .container .thumbex .thumbnail:hover span {
+            opacity: 0; }
